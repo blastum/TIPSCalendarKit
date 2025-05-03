@@ -1,6 +1,6 @@
 //
 //  SequenceExtensions.swift
-//  TIPSCalLib
+//  TIPSCalendarLib
 //
 //  Created by James Blasius on 5/3/25.
 //
