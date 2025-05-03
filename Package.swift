@@ -4,14 +4,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "TIPSCalLib",
+    name: "TIPSCalendarLib",
     platforms: [
         .macOS(.v15)
     ],
     products: [
         .library(
-            name: "TIPSCalLib",
-            targets: ["TIPSCalLib"]),
+            name: "TIPSCalendarLib",
+            targets: ["TIPSCalendarLib"]),
     ],
     dependencies: [
         .package(url: "https://github.com/blastum/TIPSKit.git", branch: "master"),
@@ -19,14 +19,14 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "TIPSCalLib",
+            name: "TIPSCalendarLib",
             dependencies: [
                 .product(name: "TIPSKit", package: "TIPSKit"),
                 .product(name: "FetchKit", package: "FetchKit")
             ]),
         .testTarget(
-            name: "TIPSCalLibTests",
-            dependencies: ["TIPSCalLib"]
+            name: "TIPSCalendarLibTests",
+            dependencies: ["TIPSCalendarLib"]
         ),
     ]
 )

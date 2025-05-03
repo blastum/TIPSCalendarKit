@@ -1,0 +1,24 @@
+{
+  "originHash" : "cd9523c86d9995fb0a78ef95e14a84367de6afa1d5a9b61247fd5bf978b93800",
+  "pins" : [
+    {
+      "identity" : "fetchkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/blastum/FetchKit.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "f24d77f0bdc20c2171904a4c9fa42ab4222642f6"
+      }
+    },
+    {
+      "identity" : "tipskit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/blastum/TIPSKit.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "c294d13f9213dcd93329d300c7f19dc6312df476"
+      }
+    }
+  ],
+  "version" : 3
+}
