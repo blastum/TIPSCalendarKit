@@ -5,17 +5,25 @@ import PackageDescription
 
 let package = Package(
     name: "TIPSCalLib",
+    platforms: [
+        .macOS(.v15)
+    ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "TIPSCalLib",
             targets: ["TIPSCalLib"]),
     ],
+    dependencies: [
+        .package(url: "https://github.com/blastum/TIPSKit.git", branch: "master"),
+        .package(url: "https://github.com/blastum/FetchKit.git", branch: "master")
+    ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "TIPSCalLib"),
+            name: "TIPSCalLib",
+            dependencies: [
+                .product(name: "TIPSKit", package: "TIPSKit"),
+                .product(name: "FetchKit", package: "FetchKit")
+            ]),
         .testTarget(
             name: "TIPSCalLibTests",
             dependencies: ["TIPSCalLib"]
